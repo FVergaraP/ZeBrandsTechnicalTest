@@ -19,14 +19,6 @@ def create_user(user: user_schemas.UserCreate, db: Session = Depends(get_db)):
 
 @router.get("/users/{user_email}", response_model=user_schemas.User)
 def read_user(user_email: str, db: Session = Depends(get_db)):
-    db_user = db_manager.get_user_by_email(db, email=user_email)
-    if db_user is None:
-        raise HTTPException(status_code=404, detail="User not found")
-    return db_user
-
-
-@router.get("/users2/{user_email}", response_model=user_schemas.User)
-def read_user(user_email: str, db: Session = Depends(get_db)):
     db_user = users_services.get_user_by_email(db, user_email)
     if db_user is None:
         raise HTTPException(status_code=404, detail="User not found")
