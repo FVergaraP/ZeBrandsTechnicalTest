@@ -34,7 +34,6 @@ sqlite3 db_zebrands < init.sql
 * Implement better authentication, maybe with 3rd party service as cognito
 * make script to run all microservice
 * make postman with documentation, better than swagger
-* update databse with new field "superadmin" and init script
 * implement tests
   * test for services
   * test for manager
