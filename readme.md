@@ -37,3 +37,9 @@ sqlite3 db_zebrands < init.sql
 * make postman with documentation, better than swagger
 * update databse with new field "superadmin" and init script
 * implement tests
+  * test for services
+  * test for manager
+  * test for utils
+* create product ms
+* create notification ms
+* move keys to some env/key repository like vault or other
