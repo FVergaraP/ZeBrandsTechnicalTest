@@ -14,3 +14,16 @@ def create_user(db: Session, user: user_schemas.UserCreate):
     db.commit()
     db.refresh(db_user)
     return db_user
+
+
+def delete_user(db: Session, user: models.User):
+    user.disable = True
+    db.commit()
+    return 'Deleted'
+
+
+def enable_user(db: Session, user: models.User, hashed_password: str):
+    user.disable = False
+    user.password = hashed_password
+    db.commit()
+    return user

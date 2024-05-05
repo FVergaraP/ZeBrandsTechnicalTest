@@ -13,6 +13,11 @@ def create_user(user: user_schemas.UserCreate, db: Session = Depends(get_db)):
     return users_services.create_user(db=db, user=user)
 
 
+@router.delete("/users/{user_email}")
+def delete_user(user_email: str, db: Session = Depends(get_db)):
+    return users_services.delete_user(db, user_email)
+
+
 @router.get("/users/{user_email}", response_model=user_schemas.User)
 def read_user(user_email: str, db: Session = Depends(get_db)):
     db_user = users_services.get_user_by_email(db, user_email)
