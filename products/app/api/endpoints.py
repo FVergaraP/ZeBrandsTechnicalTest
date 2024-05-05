@@ -16,3 +16,8 @@ def create_product(product: ProductBase, db: Session = Depends(get_db)):
 @router.get("/products/", dependencies=[Depends(verify_user)])
 def get_products(db: Session = Depends(get_db)):
     return products_services.get_products(db)
+
+
+@router.patch("/products/", dependencies=[Depends(verify_user)])
+def update_product(product: ProductBase, db: Session = Depends(get_db)):
+    return products_services.update_product(db, product=product)
