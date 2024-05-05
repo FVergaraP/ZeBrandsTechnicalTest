@@ -23,4 +23,4 @@ class User(UserBase):
     disable: bool
 
     class Config:
-        orm_mode = True
+        from_attribute = True
