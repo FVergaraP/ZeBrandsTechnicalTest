@@ -28,3 +28,16 @@ If you want change password, do it with hash password [TODO] link to hash online
 ```bash
 sqlite3 db_zebrands < init.sql
 ```
+
+## RoadMap
+### TODO
+* Implement better authentication, maybe with 3rd party service as cognito
+* make script to run all microservice
+* make postman with documentation, better than swagger
+* implement tests
+  * test for services
+  * test for manager
+  * test for utils
+* create product ms
+* create notification ms
+* move keys to some env/key repository like vault or other
