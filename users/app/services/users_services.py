@@ -5,8 +5,7 @@ from sqlalchemy.orm import Session
 
 from app.config.logger import get_custom_logger
 from app.database import db_manager
-from app.schemas import user_schemas
-from app.schemas.user_schemas import UserToken
+from app.schemas.user_schemas import UserToken, UserCredential, UserCreate
 from app.utils.authentication import create_access_token
 from app.utils.constants.error import USER_NOT_FOUND, EMAIL_ALREADY_EXISTS, BAD_CREDENTIALS
 from app.utils.encrypt import get_password_hash, verify_password
@@ -18,7 +17,7 @@ def get_user_by_email(db: Session, user_email: str):
     return db_manager.get_user_by_email(db, user_email)
 
 
-def create_user(db: Session, user: user_schemas.UserCreate):
+def create_user(db: Session, user: UserCreate):
     existing_user = db_manager.get_user_by_email(db, user.email)
 
     if existing_user:
@@ -42,7 +41,7 @@ def delete_user(db: Session, user_email: str):
     return db_manager.delete_user(db, db_user)
 
 
-def change_password(db, user: user_schemas.UserCreate):
+def change_password(db, user: UserCredential):
     existing_user = db_manager.get_user_by_email(db, user.email)
 
     if not existing_user or existing_user.disable:
@@ -54,7 +53,7 @@ def change_password(db, user: user_schemas.UserCreate):
     return 'Password changed successfully'
 
 
-def login(db: Session, user: user_schemas.UserCredential):
+def login(db: Session, user: UserCredential):
     existing_user = db_manager.get_user_by_email(db, user.email)
 
     if not existing_user or existing_user.disable:
