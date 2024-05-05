@@ -19,3 +19,7 @@ def create_product(db: Session, product: ProductBase):
     db.commit()
     db.refresh(db_product)
     return db_product
+
+
+def get_products(db):
+    return db.query(models.Product).all()

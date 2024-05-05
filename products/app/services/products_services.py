@@ -18,3 +18,7 @@ def create_product(db: Session, product: ProductBase):
         raise custom_internal_exception(PRODUCT_ALREADY_EXISTS)
 
     return db_manager.create_product(db, product)
+
+
+def get_products(db):
+    return db_manager.get_products(db)
