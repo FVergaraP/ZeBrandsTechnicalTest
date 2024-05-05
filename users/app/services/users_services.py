@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app.config.logger import get_custom_logger
 from app.database import db_manager
 from app.schemas import user_schemas
-from app.utils.constants.error import USER_NOT_FOUND
+from app.utils.constants.error import USER_NOT_FOUND, EMAIL_ALREADY_EXISTS
 from app.utils.encrypt import get_password_hash
 
 logger = get_custom_logger(logging.getLogger(__name__))
@@ -24,7 +24,7 @@ def create_user(db: Session, user: user_schemas.UserCreate):
             return db_manager.enable_user(db, existing_user, get_password_hash(user.password))
         else:
             logger.error("The user with this email already exists")
-            raise HTTPException(status_code=400, detail="Email already registered")
+            raise HTTPException(status_code=500, detail={"code": EMAIL_ALREADY_EXISTS})
 
     user.password = get_password_hash(user.password)
     return db_manager.create_user(db, user)
@@ -35,7 +35,7 @@ def delete_user(db: Session, user_email: str):
 
     if not db_user:
         logger.error("The user with this email not exist")
-        raise HTTPException(status_code=500, detail="Internal server error")
+        raise HTTPException(status_code=500, detail={"code": USER_NOT_FOUND})
 
     return db_manager.delete_user(db, db_user)
 
