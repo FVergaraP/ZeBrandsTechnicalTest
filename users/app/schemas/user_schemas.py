@@ -10,7 +10,11 @@ class UserCreate(UserBase):
     password: str
 
 
-class UserRefreshPassword(BaseModel):
+class UserToken(BaseModel):
+    access_token: str
+
+
+class UserCredential(BaseModel):
     email: str
     password: str
 

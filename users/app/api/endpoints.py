@@ -19,8 +19,13 @@ def delete_user(user_email: str, db: Session = Depends(get_db)):
 
 
 @router.patch("/users/change_password")
-def create_user(user: user_schemas.UserRefreshPassword, db: Session = Depends(get_db)):
+def create_user(user: user_schemas.UserCredential, db: Session = Depends(get_db)):
     return users_services.change_password(db=db, user=user)
+
+
+@router.post("/users/login", response_model=user_schemas.UserToken)
+def login_admin(user: user_schemas.UserCredential, db: Session = Depends(get_db)):
+    return users_services.login(db=db, user=user)
 
 
 @router.get("/users/{user_email}", response_model=user_schemas.User)
