@@ -9,8 +9,7 @@ def get_user_by_email(db: Session, email: str):
 
 
 def create_user(db: Session, user: user_schemas.UserCreate):
-    fake_hashed_password = user.password
-    db_user = models.User(email=user.email, password=fake_hashed_password)
+    db_user = models.User(email=user.email, password=user.password, full_name=user.full_name)
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
