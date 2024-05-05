@@ -22,4 +22,16 @@ def create_product(db: Session, product: ProductBase):
 
 
 def get_products(db):
-    return db.query(models.Product).all()
+    return db.query(models.Product).filter(models.Product.deleted == False).all()
+
+
+def delete_product(db: Session, product: models.Product):
+    product.deleted = True
+    db.commit()
+    return 'Deleted'
+
+
+def enable_product(db, product):
+    product.deleted = False
+    db.commit()
+    return product

@@ -16,6 +16,9 @@ def create_product(db: Session, product: ProductBase):
     existing_product = db_manager.get_product_by_sky(db, product.sku)
 
     if existing_product:
+        if existing_product.deleted:
+            return db_manager.enable_product(db, existing_product)
+
         logger.error("There is already a product with sku {}".format(product.sku))
         raise custom_internal_exception(PRODUCT_ALREADY_EXISTS)
 
@@ -40,3 +43,13 @@ def update_product(db, product, request: Request):
     db.commit()
     notify_all_users(existing_product, request.state.user)
     return existing_product
+
+
+def delete_product(db, sku):
+    existing_product = db_manager.get_product_by_sky(db, sku)
+
+    if not existing_product:
+        logger.error("There is no product with sku {}".format(sku))
+        raise custom_internal_exception(PRODUCT_NOT_EXISTS)
+
+    return db_manager.delete_product(db, existing_product)

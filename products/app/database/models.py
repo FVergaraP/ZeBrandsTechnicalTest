@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, REAL
+from sqlalchemy import Column, String, REAL, Boolean
 
 from app.config.database import Base
 
@@ -10,3 +10,4 @@ class Product(Base):
     name = Column(String)
     brand = Column(String)
     price = Column(REAL)
+    deleted = Column(Boolean)
