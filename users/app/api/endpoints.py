@@ -13,7 +13,7 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
     return users_services.create_user(db=db, user=user)
 
 @router.get("/users/validate_token", response_model=UserBase, dependencies=[Depends(verify_user)])
-def create_user(request: Request):
+def validate_token(request: Request):
     return request.state.user
 
 
