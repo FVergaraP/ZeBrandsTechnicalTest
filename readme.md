@@ -2,7 +2,8 @@ Starting Project
 
 Prerequisites
 
-    - Python 3.11
+    - Python 3.11.8
+    - pip 24.0
     - virtualenv (optional)
     
 
@@ -22,7 +23,7 @@ source env_name/bin/activate
 To get all package for project, you can run the next command. The requirement.txt file contains all package used.
 
 ```bash
-pip install requirement.txt
+pip install -r requirement.txt
 ```
 
 ### Database
