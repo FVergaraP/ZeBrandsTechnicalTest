@@ -10,4 +10,4 @@ class Product(Base):
     name = Column(String)
     brand = Column(String)
     price = Column(REAL)
-    deleted = Column(Boolean)
+    deleted = Column(Boolean, default=False)
