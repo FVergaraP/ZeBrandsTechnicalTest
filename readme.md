@@ -1,6 +1,6 @@
-Starting Project
+# Starting Project
 
-Prerequisites
+## Prerequisites
 
     - Python 3.11.8
     - pip 24.0
