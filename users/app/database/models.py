@@ -10,4 +10,5 @@ class User(Base):
     full_name = Column(String)
     password = Column(String)
     access_token = Column(String)
+    superadmin = Column(Boolean, default=False)
     disable = Column(Boolean, default=False)
