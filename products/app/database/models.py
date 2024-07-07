@@ -11,3 +11,10 @@ class Product(Base):
     brand = Column(String)
     price = Column(REAL)
     deleted = Column(Boolean, default=False)
+
+
+class User(Base):
+    __tablename__ = "users"
+
+    email = Column(String, primary_key=True, unique=True, index=True)
+    disable = Column(Boolean, default=False)

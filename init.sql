@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `users` (
     `disable` boolean default false
 );
 
-INSERT INTO `users` (`email`, `full_name`, `password`, `superadmin`) VALUES ('tpogacar@giro.it', 'Tadej Pogacar', '$2b$12$T64sPBGjyf6nIxHe5y74a.vHTYx4sTEu1aYASWeXpyzpVsDzRcsrO', 1);
+INSERT INTO `users` (`email`, `full_name`, `password`, `superadmin`) VALUES ('fco.vergara.pena@gmail.com', 'Tadej Pogacar', '$2b$12$T64sPBGjyf6nIxHe5y74a.vHTYx4sTEu1aYASWeXpyzpVsDzRcsrO', 1);
 
 CREATE TABLE IF NOT EXISTS `products` (
     `sku` varchar(100) PRIMARY KEY NOT NULL UNIQUE,

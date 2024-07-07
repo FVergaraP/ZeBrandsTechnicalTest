@@ -29,7 +29,7 @@ def get_products(db):
     return db_manager.get_products(db)
 
 
-def update_product(db, product, request: Request):
+async def update_product(db, product):
     existing_product = db_manager.get_product_by_sky(db, product.sku)
 
     if not existing_product:
@@ -37,11 +37,10 @@ def update_product(db, product, request: Request):
         raise custom_internal_exception(PRODUCT_NOT_EXISTS)
 
     existing_product.name = product.name
-    existing_product.description = product.description
     existing_product.price = product.price
 
     db.commit()
-    notify_all_users(existing_product, request.state.user)
+    await notify_all_users(db, existing_product)
     return existing_product
 
 
