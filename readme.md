@@ -36,7 +36,7 @@ sqlite3 db_zebrands < init.sql
 
 For this admin the credential will be:
 ```
-email: tpogacar@giro.it
+email: fco.vergara.pena@gmail.com
 password: defaultadmin
 ```
 This admin can't be deleted, because is protected has 'superadmin', you can create other user (admins) and deleted to.
@@ -46,6 +46,7 @@ This admin can't be deleted, because is protected has 'superadmin', you can crea
 The project is structured by microservice architecture, we have to microservice: 
 * products
 * users
+* notifications
 
 ### Start microservices
 
@@ -60,6 +61,11 @@ users % python -m uvicorn main:app --reload --port 8010
 products % python -m uvicorn main:app --reload --port 8011
 ```
 
+#### MS notifications
+```bash
+notifications % python -m uvicorn main:app --reload --port 8012
+```
+
 ## Using Project
 
 For use the project you can use the example postman given, or see the alternative documentation (openapi)
@@ -69,6 +75,9 @@ http://127.0.0.1:8010/docs
 
 products
 http://127.0.0.1:8011/docs
+
+notifications
+http://127.0.0.1:8012/docs
 ```
 
 #### * Only two endpoints are available for all users. This are 'login', to get token and the other is [GET]'products'. For others endpoitns you need use the given token has header, like this:
@@ -76,16 +85,19 @@ http://127.0.0.1:8011/docs
 x-token:<>value given in the login endpoint>
 ```
 
+#### Considerations for notification services
+```
+You can use the credentials provided for AWS, but these are limited to SandBox mode for SES. You can use your own credentials, editing them in the variables of the notifications microservice.
+SandBox mode (non-productive) limits mail sending to verified addresses only. If you want to send emails to new addresses, you must contact the owner of the repository (AWS credentials) or manage your own credentials.
+```
 
 *If you change ms users port, don't forget change this inside of env file in the products microservices.
 ## RoadMap
-For the given challenge not all the requirement were covered. The CRUD for users and product are in state DONE. About the notifications to other admins, is in state PENDING. 
 
-### TODO - Pending task and optional requirement to improve the project.
+### Pending task and optional requirement to improve the project.
 
 ### Functionalities Requirements
-1. Implements the notification to other user, when we change product data. For this, is recommended create other microservice for this logic. 
-In this ms whe can use some 3rd party has gmail, SES or Salesforce for example.
+1. Upgrade SES servie from SANDBOX mode to Production mode, with this we can send emails without email's verifications
 2. Improve list of product through pagination, adding some filters has limit and page
 
 ### Technicals Requirements
@@ -93,4 +105,6 @@ In this ms whe can use some 3rd party has gmail, SES or Salesforce for example.
 2. Create some script, maybe a shell-script, to initialize and run all project (both ms) with only one command.
 3. Install some package to retrieve the coverage of code, or some report about this. This can be a option https://coverage.readthedocs.io/
 4. Add test to cover services, database, and config layers.
-5. Move the envs, specially the keys, to some cloud repository for better confidentiality
+5. Move database to MySql or other robust database
+5. Move the envs, specially the keys, to some cloud repository for better confidentiality, has vault
+6. Implements docker or other system container, for microservice and database (Ref: https://fastapi.tiangolo.com/deployment/docker/).
