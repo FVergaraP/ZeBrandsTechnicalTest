@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     jwt_algorithm: str
     sqlalchemy_database_url: str
     validate_token_url: str
+    notify_service_url: str
 
     model_config = SettingsConfigDict(env_file=".env")
 

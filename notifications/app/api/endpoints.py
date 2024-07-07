@@ -7,6 +7,6 @@ from app.services import notify_services
 router = APIRouter()
 
 
-@router.post("/send-notification", dependencies=[Depends(verify_user)])
+@router.post("/send-notification")
 def send_notification(email: Email):
     return notify_services.send_notification(email=email)

@@ -13,14 +13,14 @@ def create_product(product: ProductBase, db: Session = Depends(get_db)):
     return products_services.create_product(db=db, product=product)
 
 
-@router.get("/products/", dependencies=[Depends(verify_user)])
+@router.get("/products/")
 def get_products(db: Session = Depends(get_db)):
     return products_services.get_products(db)
 
 
 @router.patch("/products/", dependencies=[Depends(verify_user)])
-def update_product(product: ProductBase, db: Session = Depends(get_db)):
-    return products_services.update_product(db, product=product)
+async def update_product(product: ProductBase, db: Session = Depends(get_db)):
+    return await products_services.update_product(db, product=product)
 
 
 @router.delete("/products/{sku}", dependencies=[Depends(verify_user)])

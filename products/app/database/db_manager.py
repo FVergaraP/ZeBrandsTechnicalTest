@@ -35,3 +35,7 @@ def enable_product(db, product):
     product.deleted = False
     db.commit()
     return product
+
+
+def get_users(db):
+    return db.query(models.User).filter(models.User.disable == False).all()
