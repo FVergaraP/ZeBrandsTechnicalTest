@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="814d95a4-74ea-4d32-a3f5-fc3dd1931412" name="Changes" comment="fix: default value for deleted field in database model">
+      <change afterPath="$PROJECT_DIR$/../.idea/ZeBrandsTechnicalTest-PRUEBAS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/notifications.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/dependencies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/endpoints.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schemas/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schemas/email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/authentication_services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/notify_services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/constants/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/constants/error.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="feature/users-ms" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;FVergaraP&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/FVergaraP/ZeBrandsTechnicalTest.git&quot;,
+    &quot;accountId&quot;: &quot;0cfc3ff5-d1c5-4aa5-9081-f1da2c08ca85&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2g1U6e51qP5frx9RH9M9jZWala9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "FastAPI.Unnamed.executor": "Run",
+    "FastAPI.products.executor": "Run",
+    "FastAPI.users.executor": "Run",
+    "Python tests.Python tests for test_endpoints.TestUserEndpoints.test_create_user.executor": "Run",
+    "Python tests.Python tests for test_endpoints.TestUserEndpoints.test_create_user_failure.executor": "Run",
+    "Python tests.Python tests for test_endpoints.TestUserEndpoints.test_login_admin_failure_2.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.testBoto3.executor": "Run",
+    "Python.testingBoto3.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/panchojvp/Documents/Works/Personal/ZeBrandsTechnicalTest-PRUEBAS/notifications",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/test_api" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="notifications" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testBoto3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="notifications" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testBoto3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testingBoto3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="notifications" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testingBoto3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="products" type="Python.FastAPI">
+      <option name="additionalOptions" value="--reload --port 8002" />
+      <option name="file" value="$PROJECT_DIR$/main.py" />
+      <module name="products" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../../fastApiProject/.venv/bin/python" />
+      <option name="SDK_NAME" value="Python 3.11 (fastApiProject)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="users" type="Python.FastAPI">
+      <option name="additionalOptions" value="--reload --port 8001" />
+      <option name="file" value="$PROJECT_DIR$/..$PROJECT_DIR$/../../../../../../main.py" />
+      <module name="products" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../../fastApiProject/.venv/bin/python" />
+      <option name="SDK_NAME" value="Python 3.11 (fastApiProject)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_endpoints.TestUserEndpoints.test_create_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="users" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test/test_api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_endpoints.TestUserEndpoints.test_create_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_endpoints.TestUserEndpoints.test_create_user_failure" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="users" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test/test_api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_endpoints.TestUserEndpoints.test_create_user_failure&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="FastAPI.products" />
+      <item itemvalue="FastAPI.users" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.testBoto3" />
+      <item itemvalue="Python.testingBoto3" />
+      <item itemvalue="Python tests.Python tests for test_endpoints.TestUserEndpoints.test_create_user" />
+      <item itemvalue="Python tests.Python tests for test_endpoints.TestUserEndpoints.test_create_user_failure" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.testBoto3" />
+        <item itemvalue="Python.testingBoto3" />
+        <item itemvalue="Python tests.Python tests for test_endpoints.TestUserEndpoints.test_create_user_failure" />
+        <item itemvalue="Python tests.Python tests for test_endpoints.TestUserEndpoints.test_create_user" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="814d95a4-74ea-4d32-a3f5-fc3dd1931412" name="Changes" comment="" />
+      <created>1714864404797</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714864404797</updated>
+      <workItem from="1714864405813" duration="10631000" />
+      <workItem from="1714915006859" duration="17464000" />
+      <workItem from="1714939334013" duration="1720000" />
+      <workItem from="1714941143968" duration="4466000" />
+      <workItem from="1715086908010" duration="545000" />
+      <workItem from="1717177423616" duration="3151000" />
+      <workItem from="1717252579118" duration="5036000" />
+      <workItem from="1720203301142" duration="352000" />
+      <workItem from="1720358991492" duration="71000" />
+      <workItem from="1720365033099" duration="2078000" />
+    </task>
+    <task id="LOCAL-00001" summary="refactor: remove unused implementation direct to db">
+      <option name="closed" value="true" />
+      <created>1714864652961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714864652961</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: add custom logger to show module and time">
+      <option name="closed" value="true" />
+      <created>1714868621217</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714868621217</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: add encryption for user password">
+      <option name="closed" value="true" />
+      <created>1714868682810</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714868682810</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: modify create user with services logic">
+      <option name="closed" value="true" />
+      <created>1714868713644</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714868713644</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: delete user with &quot;logic delete&quot; and update create to enable deleted user">
+      <option name="closed" value="true" />
+      <created>1714871260125</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714871260125</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: update the password of user">
+      <option name="closed" value="true" />
+      <created>1714872205294</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714872205294</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor: add code in handler exception 500 code&#10;refactor: change user existing exception code (400 by 500)">
+      <option name="closed" value="true" />
+      <created>1714872397503</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714872397503</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: login admin and return access_token">
+      <option name="closed" value="true" />
+      <created>1714875143229</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714875143229</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor: change imports from schemas">
+      <option name="closed" value="true" />
+      <created>1714875268218</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714875268218</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: add securitization with token for endpoints create, delate and update">
+      <option name="closed" value="true" />
+      <created>1714922051484</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714922051484</updated>
+    </task>
+    <task id="LOCAL-00011" summary="refactor: response only email and full name on create">
+      <option name="closed" value="true" />
+      <created>1714929330278</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714929330278</updated>
+    </task>
+    <task id="LOCAL-00012" summary="refactor: solve warning">
+      <option name="closed" value="true" />
+      <created>1714929374472</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714929374472</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test: add test for endpoints.py">
+      <option name="closed" value="true" />
+      <created>1714929392252</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714929392252</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: move env to env file and create config module">
+      <option name="closed" value="true" />
+      <created>1714938166817</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714938166817</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: update script bd with fields and password data&#10;docs: update readme.md, TODO task">
+      <option name="closed" value="true" />
+      <created>1714938598200</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714938598200</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: base product ms&#10;feat: add create product endpoint&#10;feat: validate token with ms user">
+      <option name="closed" value="true" />
+      <created>1714943202805</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714943202805</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: list all products">
+      <option name="closed" value="true" />
+      <created>1714943680501</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714943680501</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: update a product">
+      <option name="closed" value="true" />
+      <created>1714944233084</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1714944233084</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: delete a product">
+      <option name="closed" value="true" />
+      <created>1714945196238</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1714945196238</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix: default value for deleted field in database model">
+      <option name="closed" value="true" />
+      <created>1715087447423</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1715087447423</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor: remove unused implementation direct to db" />
+    <MESSAGE value="feat: add custom logger to show module and time" />
+    <MESSAGE value="feat: add encryption for user password" />
+    <MESSAGE value="feat: modify create user with services logic" />
+    <MESSAGE value="feat: delete user with &quot;logic delete&quot; and update create to enable deleted user" />
+    <MESSAGE value="feat: update the password of user" />
+    <MESSAGE value="refactor: add code in handler exception 500 code&#10;refactor: change user existing exception code (400 by 500)" />
+    <MESSAGE value="feat: login admin and return access_token" />
+    <MESSAGE value="refactor: change imports from schemas" />
+    <MESSAGE value="feat: add securitization with token for endpoints create, delate and update" />
+    <MESSAGE value="refactor: response only email and full name on create" />
+    <MESSAGE value="refactor: solve warning" />
+    <MESSAGE value="test: add test for endpoints.py" />
+    <MESSAGE value="feat: move env to env file and create config module" />
+    <MESSAGE value="feat: update script bd with fields and password data&#10;docs: update readme.md, TODO task" />
+    <MESSAGE value="feat: base product ms&#10;feat: add create product endpoint&#10;feat: validate token with ms user" />
+    <MESSAGE value="feat: list all products" />
+    <MESSAGE value="feat: update a product" />
+    <MESSAGE value="feat: delete a product" />
+    <MESSAGE value="fix: default value for deleted field in database model" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: default value for deleted field in database model" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/products$users.coverage" NAME="users Coverage Results" MODIFIED="1714940753869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/notifications$main.coverage" NAME="main Coverage Results" MODIFIED="1720366111377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/products$products.coverage" NAME="products Coverage Results" MODIFIED="1715086988051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/users$users.coverage" NAME="users Coverage Results" MODIFIED="1714938493356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/notifications$testBoto3.coverage" NAME="testBoto3 Coverage Results" MODIFIED="1720203317760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/users$.coverage" NAME=" Coverage Results" MODIFIED="1714929270921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_api" />
+    <SUITE FILE_PATH="coverage/notifications$testingBoto3.coverage" NAME="testingBoto3 Coverage Results" MODIFIED="1717254442745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/users$Unnamed.coverage" NAME="users Coverage Results" MODIFIED="1714874763665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
