@@ -43,14 +43,14 @@ This admin can't be deleted, because is protected has 'superadmin', you can crea
 
 ## Running Project
 
-The project is structured by microservice architecture, we have to microservice: 
+The project is structured by microservice architecture, we have this microservice: 
 * products
 * users
 * notifications
 
 ### Start microservices
 
-Both microservices are running by the same way, the only difference are the port used to run. You need stay in the main folder of each ms to run the project.
+Microservices are running by the same way, the only difference are the port used to run. You need stay in the main folder of each ms to run the project.
 
 #### MS users
 ```bash
