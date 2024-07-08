@@ -1,4 +1,5 @@
 import logging
+import re
 
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
@@ -7,13 +8,22 @@ from app.config.logger import get_custom_logger
 from app.database import db_manager
 from app.schemas.user_schemas import UserToken, UserCredential, UserCreate
 from app.utils.authentication import create_access_token
-from app.utils.constants.error import USER_NOT_FOUND, EMAIL_ALREADY_EXISTS, BAD_CREDENTIALS, DELETING_SUPERADMIN
+from app.utils.constants.error import USER_NOT_FOUND, EMAIL_ALREADY_EXISTS, BAD_CREDENTIALS, DELETING_SUPERADMIN, \
+    BAD_REQUEST
 from app.utils.encrypt import get_password_hash, verify_password
 
 logger = get_custom_logger(logging.getLogger(__name__))
 
 
 def create_user(db: Session, user: UserCreate):
+    if not user.full_name:
+        logger.error("The full name of the user is empty")
+        raise HTTPException(status_code=500, detail={"code": BAD_REQUEST})
+
+    if not re.fullmatch(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", user.email):
+        logger.error("The email of the user is invalid")
+        raise HTTPException(status_code=500, detail={"code": BAD_REQUEST})
+
     existing_user = db_manager.get_user_by_email(db, user.email)
 
     if existing_user:
